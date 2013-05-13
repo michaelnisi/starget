@@ -1,0 +1,35 @@
+{
+  "name": "starget",
+  "version": "0.1.0",
+  "description": "download images from starred Google Reader items",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "dependencies": {
+    "scrim": "0.2.x",
+    "cop": "0.3.x",
+    "tubule": "0.1.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/michaelnisi/starlite.git"
+  },
+  "keywords": [
+    "scrape",
+    "download",
+    "starred",
+    "images",
+    "google",
+    "reader"
+  ],
+  "author": {
+    "name": "Michael Nisi",
+    "email": "michael.nisi@gmail.com",
+    "url": "http://michaelnisi.com"
+  },
+  "license": "MIT"
+}
