@@ -1,6 +1,6 @@
 {
   "name": "starget",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "download images from starred Google Reader items",
   "main": "index.js",
   "directories": {
@@ -15,7 +15,8 @@
   "dependencies": {
     "scrim": "0.2.x",
     "cop": "0.3.x",
-    "tubule": "0.1.x"
+    "tubule": "0.1.x",
+    "request": "2.21.x"
   },
   "repository": {
     "type": "git",

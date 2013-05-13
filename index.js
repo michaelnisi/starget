@@ -8,6 +8,7 @@ var http = require('http')
   , cop = require('cop')
   , scrim = require('scrim')
   , PassThrough = require('stream').PassThrough
+  , request = require('request')
 
 module.exports = function (opt) {
   var url = opt.url
@@ -22,24 +23,22 @@ module.exports = function (opt) {
     var t = tubule(dir)
     t.on('error', error)
 
-    http.get(uri, function (res) {
-      res
-        .on('error', error)
-        .pipe(scrim())
-        .on('error', error)
-        .on('more', function (u) {
-           url = u
-        })
-        .pipe(cop(filter))
-        .pipe(t)
-        .on('finish', function () {
-          all && url ? get(url) : stream.push(null)
-        })
-        .on('readable', function () {
-          var chunk = t.read()
-          if (chunk) stream.push(chunk)
-        })
-    })
+    request(uri)
+      .on('error', error)
+      .pipe(scrim())
+      .on('error', error)
+      .on('more', function (u) {
+         url = u
+      })
+      .pipe(cop(filter))
+      .pipe(t)
+      .on('finish', function () {
+        all && url ? get(url) : stream.push(null)
+      })
+      .on('readable', function () {
+        var chunk = t.read()
+        if (chunk) stream.push(chunk)
+      })
   }
 
   function error(err) {
