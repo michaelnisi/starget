@@ -1,8 +1,6 @@
 # starget - copy images of starred items
 
-![Google Reader](https://dl-web.dropbox.com/get/Public/reader.png?w=AACFB2FdUS_S9d1_nAoaVg7_g9ErA4nrlM7CsgQ98IBRhQ)
-
-`starget` is a tiny command-line tool of specific use: it copies all images referred in your starred [Google Reader](http://www.google.com/reader/) items to disk. Its peculiar use case is only exceeded by its short-livedness—use before [July 1, 2013](http://googlereader.blogspot.de/2013/03/powering-down-google-reader.html).
+The tiny `starget` command-line tool is of rather specific use: it copies all images referred in your starred [Google Reader](http://www.google.com/reader/) items to disk. Its peculiar use case is only exceeded by its short-livedness—use before [July 1, 2013](http://googlereader.blogspot.de/2013/03/powering-down-google-reader.html).
 
 ## Usage
 
@@ -15,6 +13,10 @@ The following options are available:
 To download the images of my latest [starred](http://bit.ly/13TMQGc) items:
 
     starget http://bit.ly/13TMQGc /tmp/starred
+
+Add the `-all` option and you would literally download all of my starred images since 2007. 
+
+So, if you have some starred items with images: make the starred items page public in your Google Reader settings, copy and paste the URL, and download all the images you once have starred.
 
 ## Installation
 
