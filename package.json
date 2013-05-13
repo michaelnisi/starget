@@ -1,6 +1,6 @@
 {
   "name": "starget",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "download images from starred Google Reader items",
   "main": "index.js",
   "directories": {
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/michaelnisi/starlite.git"
+    "url": "git://github.com/michaelnisi/starget.git"
   },
   "keywords": [
     "scrape",
