@@ -1,8 +1,7 @@
 
 // starget - copy images of starred items
 
-var http = require('http')
-  , path = require('path')
+var path = require('path')
   , url = require('url')
   , tubule = require('tubule')
   , cop = require('cop')
