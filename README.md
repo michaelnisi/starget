@@ -1,6 +1,6 @@
 # starget - copy images of starred items
 
-`starget` is a little command-line tool of very specific use; it copies all images referred in your starred Google Reader items to disk. Use before July 1, 2013.
+`starget` is a little command-line tool of particular usefulness: it copies all images referred in your starred Google Reader items to disk. Its peculiar use is only exceeded by its short-livedness—use before July 1, 2013.
 
 ## Usage
 
@@ -8,7 +8,11 @@
 
 The following options are available:
 
-- -all Copy all images.
+- -all Download images of all items you ever starred.
+
+The following downloads the images of my latest starred items:
+
+    starget http://bit.ly/13TMQGc /tmp/starred
 
 ## Installation
 
