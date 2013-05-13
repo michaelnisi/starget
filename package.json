@@ -1,10 +1,13 @@
 {
   "name": "starget",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "download images from starred Google Reader items",
   "main": "index.js",
   "directories": {
     "example": "example"
+  },
+  "bin": {
+    "starget": "bin/cli.js"
   },
   "engines": {
     "node": "0.10.x"
