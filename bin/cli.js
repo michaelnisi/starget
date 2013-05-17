@@ -1,11 +1,8 @@
 #!/usr/bin/env node
 
 var url = require('url')
-  , fs = require('fs')
-  , path = require('path')
   , starget = require('../')
   , cop = require('cop')
-
 
 ;(function () {
   var argv = process.argv.splice(2)
@@ -19,6 +16,7 @@ var url = require('url')
   }
 
   starget(opt)
+    .on('error', console.error)
     .pipe(cop(function (uri) { return uri + '\n' }))
     .pipe(process.stdout)
 })()

@@ -2,7 +2,6 @@
 // starget - copy images of starred items
 
 var path = require('path')
-  , url = require('url')
   , tubule = require('tubule')
   , cop = require('cop')
   , scrim = require('scrim')
@@ -50,9 +49,8 @@ module.exports = function (opt) {
 }
 
 function filter (chunk) {
-  var urlStr = chunk.toString()
-    , p = url.parse(urlStr)
-    , http = p.protocol  === 'http:'
+  var uri = require('url').parse(chunk.toString())
+    , http = uri.protocol  === 'http:'
 
-  return http && path.extname(p.path) === '.jpg' ? p.href : null
+  return http && path.extname(uri.path) === '.jpg' ? uri.href : null
 }
